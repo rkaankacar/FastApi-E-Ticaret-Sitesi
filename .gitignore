@@ -1,0 +1,23 @@
+# VS Code klasörünü yoksay
+.vscode/
+
+# Derleme çıktıları
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Sanal ortam klasörleri
+venv/
+env/
+
+# IDE dosyaları
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
