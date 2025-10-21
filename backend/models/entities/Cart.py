@@ -2,6 +2,9 @@ from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, DECIMAL
 from sqlalchemy.orm import relationship
 from backend.core.base import Base
 
+
+
+
 class Cart(Base):
     __tablename__ = "Cart"
     

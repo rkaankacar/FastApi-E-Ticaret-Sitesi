@@ -1,5 +1,8 @@
 from sqlalchemy import Column, Integer, String, DateTime, DECIMAL,ForeignKey
 from sqlalchemy.orm import relationship
+
+
+
 from backend.core.base import Base
 
 class Watches(Base): #saatler
