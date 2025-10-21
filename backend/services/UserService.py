@@ -1,6 +1,6 @@
 from backend.repository.IBaseRepository import IBaseRepository # SOYUT ARACILIK NESNESİNİ import edin
 from backend.models.entities.Users import Users
-from backend.schemas.user_schema import UserCreate, UserUpdate
+from backend.schemas.user_schemas import UserCreate, UserUpdate
 
 # Model ve Schema tiplerini User'a göre belirten bir tip oluşturuluyor
 UserRepoType = IBaseRepository[Users, UserCreate, UserUpdate]

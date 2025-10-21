@@ -4,10 +4,11 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from pydantic import BaseModel
 
 from backend.core.base import Base
-ModelType = TypeVar("ModelType", bound=Base)
+ModelType = TypeVar("ModelType", bound=Base) # type: ignore
 CreateSchemaType = TypeVar("CreateSchemaType", bound=BaseModel)
 UpdateSchemaType = TypeVar("UpdateSchemaType", bound=BaseModel)
 class IBaseRepository(ABC, Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
+    __slots__ = ("__weakref__",)
     @abstractmethod
     async def get_by_id(self, id: Any) -> Optional[ModelType]:
         pass

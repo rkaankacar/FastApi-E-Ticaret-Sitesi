@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.orm import relationship
+from sqlalchemy.sql import func
 
 
 
@@ -18,7 +19,7 @@ class Users(Base):
     City = Column(String, nullable=True)
     Country = Column(String, nullable=True)
     Role = Column(String, nullable=False)
-    CreatedAt = Column(DateTime, nullable=False)
+    CreatedAt = Column(DateTime(timezone=True), server_default=func.now(),nullable=False)
     
     # --- İLİŞKİLER (Users Tarafı) ---
     # Bir kullanıcının birden fazla SİPARİŞİ olur (çoğul)
